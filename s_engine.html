@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Search</title>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url(https://images.unsplash.com/photo-1687033826405-9d922c28d54a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            padding-right: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            width: 550px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #da6405;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 20px;
+            font-weight: normal;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #search-input:focus {
+            border-color: #da6405;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 15px;
+            width: 100%;
+            cursor: pointer;
+            background-color: #da6405;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #b34209;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        li:hover {
+            transform: translateX(10px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    
+    <div class="container">
+        <h1>InfoSearch</h1>
+        <input type="text" id="search-input" placeholder="Enter your search query here...">
+        <button id="search-btn">Search</button>
+        <button id="clear-btn">Clear History</button>
+        <h2>Search History</h2>
+        <ul id="search-history"></ul>
+    </div>
+
+    
+</body>
+
+</html>
